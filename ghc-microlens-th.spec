@@ -5,7 +5,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.4.1.1
-Release:        1.git.417.9f546a1%{?dist}
+Release:        1%{?dist}
 Summary:        Automatic generation of record lenses for microlens
 
 License:        BSD
