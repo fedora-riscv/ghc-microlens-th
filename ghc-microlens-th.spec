@@ -59,12 +59,6 @@ This package provides the Haskell %{pkg_name} library development files.
 %ghc_lib_install
 
 
-%post -p /sbin/ldconfig
-
-
-%postun -p /sbin/ldconfig
-
-
 %post devel
 %ghc_pkg_recache
 
