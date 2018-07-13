@@ -6,7 +6,7 @@
 
 Name:           ghc-%{pkg_name}
 Version:        0.4.1.3
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Automatic generation of record lenses for microlens
 
 License:        BSD
@@ -76,6 +76,9 @@ This package provides the Haskell %{pkg_name} library development files.
 
 
 %changelog
+* Fri Jul 13 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.4.1.3-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
+
 * Fri Apr 06 2018 Elliott Sales de Andrade <quantum.analyst@gmail.com> - 0.4.1.3-1
 - update to 0.4.1.3
 
