@@ -4,9 +4,11 @@
 %global pkg_name microlens-th
 %global pkgver %{pkg_name}-%{version}
 
+%bcond_with tests
+
 Name:           ghc-%{pkg_name}
-Version:        0.4.1.3
-Release:        4%{?dist}
+Version:        0.4.2.3
+Release:        1%{?dist}
 Summary:        Automatic generation of record lenses for microlens
 
 License:        BSD
@@ -21,6 +23,8 @@ BuildRequires:  ghc-rpm-macros
 BuildRequires:  ghc-containers-devel
 BuildRequires:  ghc-microlens-devel
 BuildRequires:  ghc-template-haskell-devel
+BuildRequires:  ghc-th-abstraction-devel
+BuildRequires:  ghc-transformers-devel
 # End cabal-rpm deps
 
 %description
@@ -67,6 +71,10 @@ This package provides the Haskell %{pkg_name} library development files.
 # End cabal-rpm install
 
 
+%check
+%cabal_test
+
+
 %post devel
 %ghc_pkg_recache
 
@@ -86,6 +94,9 @@ This package provides the Haskell %{pkg_name} library development files.
 
 
 %changelog
+* Thu Feb 21 2019 Jens Petersen <petersen@redhat.com> - 0.4.2.3-1
+- update to 0.4.2.3
+
 * Sun Feb 17 2019 Jens Petersen <petersen@redhat.com> - 0.4.1.3-4
 - refresh to cabal-rpm-0.13
 
