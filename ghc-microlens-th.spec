@@ -4,11 +4,11 @@
 %global pkg_name microlens-th
 %global pkgver %{pkg_name}-%{version}
 
-%bcond_with tests
+%bcond_without tests
 
 Name:           ghc-%{pkg_name}
 Version:        0.4.2.3
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Automatic generation of record lenses for microlens
 
 License:        BSD
@@ -127,6 +127,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Thu Feb 20 2020 Jens Petersen <petersen@redhat.com> - 0.4.2.3-6
+- enable tests
+
 * Wed Feb 19 2020 Jens Petersen <petersen@redhat.com> - 0.4.2.3-5
 - refresh to cabal-rpm-2.0.2
 
