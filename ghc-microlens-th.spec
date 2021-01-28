@@ -7,8 +7,8 @@
 %bcond_without tests
 
 Name:           ghc-%{pkg_name}
-Version:        0.4.3.5
-Release:        5%{?dist}
+Version:        0.4.3.9
+Release:        1%{?dist}
 Summary:        Automatic generation of record lenses for microlens
 
 License:        BSD
@@ -26,6 +26,9 @@ BuildRequires:  ghc-microlens-prof
 BuildRequires:  ghc-template-haskell-prof
 BuildRequires:  ghc-th-abstraction-prof
 BuildRequires:  ghc-transformers-prof
+%if %{with tests}
+BuildRequires:  ghc-tagged-devel
+%endif
 # End cabal-rpm deps
 
 %description
@@ -117,6 +120,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Thu Aug  5 2021 Jens Petersen <petersen@redhat.com> - 0.4.3.9-1
+- update to 0.4.3.9
+
 * Thu Jul 22 2021 Fedora Release Engineering <releng@fedoraproject.org> - 0.4.3.5-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
 
