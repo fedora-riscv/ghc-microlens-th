@@ -7,7 +7,7 @@
 %bcond_without tests
 
 Name:           ghc-%{pkg_name}
-Version:        0.4.3.9
+Version:        0.4.3.10
 Release:        1%{?dist}
 Summary:        Automatic generation of record lenses for microlens
 
@@ -123,6 +123,9 @@ This package provides the Haskell %{pkg_name} profiling library.
 
 
 %changelog
+* Thu Aug  5 2021 Jens Petersen <petersen@redhat.com> - 0.4.3.10-1
+- update to 0.4.3.10
+
 * Thu Aug  5 2021 Jens Petersen <petersen@redhat.com> - 0.4.3.9-1
 - update to 0.4.3.9
 
